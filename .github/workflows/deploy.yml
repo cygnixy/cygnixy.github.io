@@ -25,14 +25,9 @@ jobs:
         run: |
           if [ -f package.json ]; then
             npm install
+            npm run build
           fi
 
-      - name: Prepare dist directory
-        run: |
-          mkdir -p dist
-          cp -r images dist/
-          cp *.html dist/
-          cp *.css dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
