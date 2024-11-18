@@ -1,6 +1,6 @@
 {
   "name": "cygnixy-website",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "scripts": {
     "build": "npx tailwindcss -o dist/tailwind.css --minify && grunt",
     "start": "grunt watch"
