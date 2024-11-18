@@ -3,16 +3,63 @@ module.exports = function (grunt) {
 
     grunt.initConfig({
 
+        paths: {
+            src: 'src',
+            dist: 'dist',
+            includes: '<%= paths.src %>/_includes',
+        },
+
+        marked: {
+            all: {
+                options: {
+                    gfm: true,
+                    highlight: true, // Use highlight.js for syntax highlighting
+                    tables: true,
+                    breaks: false,
+                    sanitize: false,
+                    smartypants: true
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.src %>/markdown',
+                        src: '**/*.md',
+                        dest: '<%= paths.src %>/_includes',
+                        ext: '.md.html',
+                    },
+                ],
+            },
+        },
+
+
+        includes: {
+            files: {
+                cwd: '<%= paths.src %>',
+                src: ['**/*.html', '!_includes/**'],
+                dest: '<%= paths.dist %>',
+                flatten: false,
+                options: {
+                    includePath: '<%= paths.includes %>',
+                    silent: true,
+                    banner: ''
+                }
+            }
+        },
+
         htmlmin: {
             dist: {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true
                 },
-                files: {
-                    'dist/index.html': 'src/index.html',
-                    'dist/patreon.html': 'src/patreon.html'
-                }
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= paths.dist %>',
+                        src: ['**/*.html'],
+                        dest: '<%= paths.dist %>',
+                    },
+                ],
             }
         },
 
@@ -37,8 +84,8 @@ module.exports = function (grunt) {
 
         watch: {
             html: {
-                files: ['src/**/*.html'],
-                tasks: ['htmlmin']
+                files: ['<%= paths.src %>/**/*.html'],
+                tasks: ['includes', 'htmlmin']
             },
             js: {
                 files: ['src/scripts/**/*.js'],
@@ -51,5 +98,5 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['htmlmin', 'uglify', 'imagemin']);
+    grunt.registerTask('default', ['marked', 'includes', 'htmlmin', 'uglify', 'imagemin']);
 };

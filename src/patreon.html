@@ -16,90 +16,20 @@
 </head>
 
 <body class="bg-gray-100 text-gray-900">
-    <!-- Navigation -->
-    <nav class="bg-white shadow">
-        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <!-- Logo and App Name -->
-            <div class="flex items-center space-x-3">
-                <img src="images/logo.png" alt="Logo" class="w-11 h-11">
-                <span class="text-xl font-bold text-gray-800">Cygnixy</span>
-            </div>
 
-            <!-- Discord and Patreon Links -->
-            <div class="flex items-center space-x-6">
-                <a href="index.html#price" class="text-xl  text-gray-800">Pricing</a>
-                <div class="h-6 w-px bg-gray-300"></div>
-                <a href="https://discord.gg/kdtZPjzr" target="_blank"
-                    class="text-gray-600 hover:text-blue-600 flex items-center space-x-2">
-                    <img src="images/discord.png" alt="Discord" class="h-5">
-                    <span>Discord</span>
-                </a>
-                <a href="https://www.patreon.com/Cygnixy" target="_blank"
-                    class="text-gray-600 hover:text-orange-600 flex items-center space-x-2">
-                    <img src="images/patreon.png" alt="Patreon">
-                    <span>Patreon</span>
-                </a>
-            </div>
-        </div>
-    </nav>
+    include "header.html"
 
-    <section class="bg-gray-100 text-gray-900 py-16 px-6">
-        <div class="container mx-auto max-w-4xl">
-            <h1 class="text-4xl font-bold text-center mb-6">How to Upgrade to Premium</h1>
-            <ol class="list-decimal list-inside text-lg leading-8">
-                <li>
-                    <strong>Register on Patreon:</strong>
-                    <ul class="list-disc list-inside ml-6">
-                        <li>Visit the official Patreon website: <a href="https://www.patreon.com"
-                                class="text-blue-600 underline">Patreon</a>.</li>
-                        <li>Create an account:
-                            <ul class="list-disc list-inside ml-6">
-                                <li>Click <strong>Sign Up</strong> at the top-right corner.</li>
-                                <li>Fill in your email, password, and username.</li>
-                                <li>Confirm your email address by following the link sent to your inbox.</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Join the Cygnixy Group:</strong>
-                    <ul class="list-disc list-inside ml-6">
-                        <li>Go to the <a href="https://www.patreon.com/Cygnixy" class="text-blue-600 underline">Cygnixy
-                                Patreon page</a>.</li>
-                        <li>Select the <strong>Premium Tier</strong> ($10/month).</li>
-                        <li>Complete the subscription process by adding your payment information.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Access Premium Features:</strong>
-                    <ul class="list-disc list-inside ml-6">
-                        <li>Once your subscription is active:
-                            <ul class="list-disc list-inside ml-6">
-                                <li>Activate the Premium Tier in the Cygnixy application by clicking the "Login with
-                                    Patreon" button.
-                                </li>
-                        </li>
-                    </ul>
-                </li>
-                <li>Ensure that you’ve joined the Cygnixy group on Patreon to receive updates, support, and
-                    exclusive content.</li>
-                </ul>
-                </li>
-            </ol>
-            <p class="mt-8 text-lg">
-                <strong>Additional Support:</strong>
-                <br>If you encounter any issues:
-            <ul class="list-disc list-inside ml-6">
-                <li>Visit the <a href="https://discord.gg/kdtZPjzr" class="text-blue-600 underline">Discord Support
-                        Channel</a>.</li>
-                <li>Contact us at <a href="mailto:contact@cygnixy.com"
-                        class="text-blue-600 underline">contact@cygnixy.com</a> for further assistance.</li>
-            </ul>
-            </p>
-            <p class="mt-4 text-lg text-center">Enjoy the full power of <strong>Cygnixy Premium</strong> with unlimited
-                bots, extended session time, and priority support! 🚀</p>
-        </div>
-    </section>
+    <!-- Main Content -->
+    <main class="container mx-auto px-3 py-3">
+        <article class="prose prose-base bg-white p-8 rounded-lg shadow-md w-full max-w-6xl mx-auto">
+            include "upgrade_premium.md.html"
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 shadow-md">
+        include "footer.html"
+    </footer>
 </body>
+
 
 </html>
