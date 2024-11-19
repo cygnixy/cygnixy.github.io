@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'custom-blue': '#2b98d4',
       },
+      backgroundImage: {
+        'custom-hero': "url('images/background.jpg')",
+      },
     },
   },
   plugins: [
