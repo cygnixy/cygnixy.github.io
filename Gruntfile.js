@@ -82,6 +82,20 @@ module.exports = function (grunt) {
             }
         },
 
+        cssmin: {
+            dist: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/css/',
+                        src: ['**/*.css'],
+                        dest: 'dist/css/',
+                        ext: '.min.css'
+                    },
+                ]
+            }
+        },
+
         watch: {
             html: {
                 files: ['<%= paths.src %>/**/*.html'],
@@ -98,5 +112,5 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.registerTask('default', ['marked', 'includes', 'htmlmin', 'uglify', 'imagemin']);
+    grunt.registerTask('default', ['marked', 'includes', 'htmlmin', 'uglify', 'imagemin', 'cssmin']);
 };

@@ -6,14 +6,15 @@
     "start": "grunt watch"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.15",
     "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "^5.0.0",
     "grunt-contrib-htmlmin": "^3.1.0",
     "grunt-contrib-imagemin": "4.0.0",
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-includes": "^1.1.0",
     "grunt-marked": "github:vOROn200/grunt-marked",
     "load-grunt-tasks": "^5.1.0",
-    "tailwindcss": "^3.4.15",
-    "@tailwindcss/typography": "^0.5.15"
+    "tailwindcss": "^3.4.15"
   }
 }
