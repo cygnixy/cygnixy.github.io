@@ -7,13 +7,45 @@
             <span class="text-xl font-bold text-gray-800">Cygnixy</span>
         </a>
 
-        <div class="flex items-center space-x-6">
-            <!-- Pricing Link (hidden on mobile) -->
-            <a href="index.html#price" class="text-xl text-gray-800 hidden md:block">Pricing</a>
-            <div class="h-6 w-px bg-gray-300 hidden md:block"></div>
-            <!-- Discord and Patreon Links -->
+        <!-- Menu Button (mobile only) -->
+        <div class="relative md:hidden">
+            <button id="menu-toggle" class="text-gray-600 hover:text-gray-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-8 h-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Flyout Menu -->
+            <div id="mobile-menu"
+                class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg ring-1 ring-gray-900/10 z-20">
+                <a href="index.html#price"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex items-center space-x-2 rounded-t-lg">
+                    <img src="images/price-tag.png" alt="Pricing" class="h-5 w-[26px]">
+                    <span>Pricing</span>
+                </a>
+                <a href="https://discord.gg/kdtZPjzr" target="_blank"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex items-center space-x-2">
+                    <img src="images/discord.png" alt="Discord" class="h-5">
+                    <span>Discord</span>
+                </a>
+                <a href="https://www.patreon.com/Cygnixy" target="_blank"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-gray-900 flex items-center space-x-2 rounded-b-lg">
+                    <img src="images/patreon.png" alt="Patreon">
+                    <span>Patreon</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Full Menu (desktop only) -->
+        <div class="hidden md:flex items-center space-x-6">
+            <a href="index.html#price" class="text-gray-600 hover:text-orange-600 flex items-center space-x-2">
+                <img src="images/price-tag.png" alt="Pricing" class="h-5 w-[26px]">
+                <span>Pricing</span>
+            </a>
+            <div class="h-6 w-px bg-gray-300"></div>
             <a href="https://discord.gg/kdtZPjzr" target="_blank"
-                class="text-gray-600 hover:text-blue-600 flex items-center space-x-2">
+                class="text-gray-600 hover:text-orange-600 flex items-center space-x-2">
                 <img src="images/discord.png" alt="Discord" class="h-5">
                 <span>Discord</span>
             </a>

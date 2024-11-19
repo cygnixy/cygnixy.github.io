@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+        // Toggle visibility of the Flyout menu
+        mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
+        if (!menuToggle.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.add("hidden");
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
     const name = String.fromCharCode(99, 111, 110, 116, 97, 99, 116);
     const domain = String.fromCharCode(99, 121, 103, 110, 105, 120, 121, 46, 99, 111, 109);
     const emailLink = `<a href="mailto:${name}@${domain}" class="text-blue-400 hover:underline">${name}@${domain}</a>`;
