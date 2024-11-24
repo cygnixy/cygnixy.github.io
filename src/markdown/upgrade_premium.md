@@ -21,7 +21,7 @@
 
 If you encounter any issues:
 
-* Visit the [Discord Support Channel](https://discord.gg/kdtZPjzr).
+* Visit the [Discord Support Channel](https://discord.gg/ZjgsUrvPhD).
 * Contact us at [contact@cygnixy.com](mailto:contact@cygnixy.com) for further assistance.
 
 Enjoy the full power of Cygnixy **Premium** with unlimited bots, extended session time, and priority support! 🚀
