@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cygnixy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="tailwind.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    include "header.html"
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-3 py-3">
+        <article class="prose prose-base bg-white p-8 rounded-lg shadow-md w-full max-w-6xl mx-auto">
+            include "terms.md.html"
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 shadow-md">
+        include "footer.html"
+    </footer>
+
+    <script src="build.js" defer></script>
+</body>
+
+
+</html>
